@@ -54,3 +54,4 @@ frontend/index.html
 - Quiz generator
 - Progress tracking
 - Personalized learning paths
+Name-Diksha
