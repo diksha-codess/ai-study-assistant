@@ -1,53 +1,56 @@
-# 🌱 AI Study Assistant
+# AI Study Assistant
 
-## 📌 Problem Statement
-Students often struggle with planning their studies, managing time, and maintaining consistency. Unstructured study routines lead to inefficiency and poor learning outcomes.
+## About
+An AI-powered study assistant that generates structured study plans for any topic.
 
----
+## Tech Stack
+- FastAPI
+- Python
+- HTML, CSS, JavaScript
+- OpenAI API
 
-## 💡 Solution
-AI Study Assistant is an open-source tool that generates structured and personalized study plans based on user input such as topic and available time. It helps students break down complex subjects into manageable daily tasks.
+## How to Run
 
----
+1. Clone the repo:git clone https://github.com/diksha-codess/ai-study-assistant.git
 
-## 🚀 Features
-- 📅 Auto-generated study plans  
-- ⚡ Fast and lightweight  
-- 🎯 Focused task breakdown  
-- 🌐 Open-source and extensible  
 
----
+2. Go to project folder:
 
-## 🛠️ Tech Stack
-- Python (Flask)  
-- HTML, CSS, JavaScript  
+cd ai-study-assistant
 
----
 
-## ▶️ How to Run
+3. Create virtual environment:
 
-1. Clone the repository:git clone https://github.com/diksha-codess/ai-study-assistant.git
-2. Navigate to project folder:cd ai-study-assistant
-3. Install dependencies:pip install -r requirements.txt
-4. Run the app:python app.py
-5. Open in browser:http://127.0.0.1:5000
-   
-## 📊 Impact
-This project helps students improve productivity by providing structured study guidance and reducing decision fatigue.
+python -m venv venv
+venv\Scripts\activate
 
----
 
-## 🔮 Future Scope
-- Adaptive learning based on performance  
-- AI-generated quizzes  
-- Progress tracking dashboard  
+4. Install dependencies:
 
----
+pip install -r requirements.txt
 
-## 📄 License
-MIT License  
 
----
+5. Add your OpenAI API key in `app.py`:
 
-## 👩‍💻 Author
-Diksha Choudhary
+client = OpenAI(api_key="YOUR_API_KEY")
+
+
+6. Run backend:
+
+uvicorn app:app --reload
+
+
+7. Open frontend:
+
+frontend/index.html
+
+
+## Features
+- AI-generated study plans
+- Simple and fast UI
+- Helps students organize learning
+
+## Future Scope
+- Quiz generator
+- Progress tracking
+- Personalized learning paths
