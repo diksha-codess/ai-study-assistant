@@ -1,19 +1,33 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Study Assistant</title>
-    <link rel="stylesheet" href="style.css">
+    <title>AI Study Assistant</title>
 </head>
 <body>
 
-<h1>AI Study Assistant</h1>
+<h2>AI Study Assistant</h2>
 
 <input id="topic" placeholder="Enter topic">
 <button onclick="generate()">Generate</button>
 
-<ul id="tasks"></ul>
+<pre id="output"></pre>
 
-<script src="script.js"></script>
+<script>
+async function generate() {
+    const topic = document.getElementById("topic").value;
+
+    const res = await fetch("http://127.0.0.1:8000/generate", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({ topic })
+    });
+
+    const data = await res.json();
+    document.getElementById("output").innerText = data.result;
+}
+</script>
 
 </body>
 </html>
