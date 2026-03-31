@@ -5,30 +5,40 @@
 </head>
 <body>
 
-<h2>AI Study Assistant</h2>
+<h2>AI Study Assistant 🚀</h2>
 
-<input type="text" id="topic" placeholder="Enter topic">
+<input type="text" id="topic" placeholder="Enter topic here">
 <button onclick="generate()">Generate</button>
 
+<h3>Result:</h3>
 <pre id="output"></pre>
 
 <script>
 async function generate() {
-    const topic = document.getElementById("topic").value;
+    let topic = document.getElementById("topic").value;
 
-    const response = await fetch("http://localhost:8000/generate", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify({ topic: topic })
-    });
+    try {
+        let response = await fetch("http://127.0.0.1:9000/generate", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                topic: topic
+            })
+        });
 
-    const data = await response.json();
+        let data = await response.json();
 
-    document.getElementById("output").innerText = data.result;
+        document.getElementById("output").innerText = data.result;
+
+    } catch (error) {
+        alert("Backend connect nahi ho raha ❌");
+        console.log(error);
+    }
 }
 </script>
 
 </body>
 </html>
+<!-- updated -->
