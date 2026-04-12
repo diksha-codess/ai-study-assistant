@@ -1,57 +1,31 @@
-# AI Study Assistant
+# 🚀 AI Study Assistant
 
-## About
-An AI-powered study assistant that generates structured study plans for any topic.
+## 📌 Problem
+Students often struggle to plan their studies effectively and stay consistent.
 
-## Tech Stack
-- FastAPI
-- Python
-- HTML, CSS, JavaScript
-- OpenAI API
+## 💡 Solution
+AI Study Assistant helps students generate structured study plans and stay organized.
 
-## How to Run
+## ⚙️ Features
+- Generate study plan
+- Easy to use interface
+- Helps in organizing study schedule
 
-1. Clone the repo:git clone https://github.com/diksha-codess/ai-study-assistant.git
+## 🖥️ Demo
+👉 https://diksha-codess.github.io/ai-study-assistant/
 
+## 📸 Screenshots
+(Add screenshots here)
 
-2. Go to project folder:
+## 🛠️ Tech Stack
+- HTML
+- CSS
+- JavaScript
 
-cd ai-study-assistant
-
-
-3. Create virtual environment:
-
-python -m venv venv
-venv\Scripts\activate
-
-
-4. Install dependencies:
-
-pip install -r requirements.txt
-
-
-5. Add your OpenAI API key in `app.py`:
-
-client = OpenAI(api_key="YOUR_API_KEY")
-
-
-6. Run backend:
-
-uvicorn app:app --reload
-
-
-7. Open frontend:
-
-frontend/index.html
-
-
-## Features
-- AI-generated study plans
-- Simple and fast UI
-- Helps students organize learning
-
-## Future Scope
-- Quiz generator
+## 🚀 Future Improvements
 - Progress tracking
-- Personalized learning paths
-Name-Diksha
+- Smart AI suggestions
+- Reminders
+
+## 🤝 Contribution
+This is an open-source project. Contributions are welcome!
